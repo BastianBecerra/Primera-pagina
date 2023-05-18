@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+import React from 'react';
+import { BrowserRouter, Route, Routes,  Navigate} from 'react-router-dom';
+
+
+import Inicio from './view/Inicio';
+import SegundaVista from './view/SegundaVista';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+            <Route path="/limpiezainteligente" element={<SegundaVista />} />
+            <Route path="/" element={<Inicio />} />
+            <Route path='*' render={() => <Navigate to="/" />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
