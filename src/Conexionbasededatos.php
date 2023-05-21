@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost"; //Aqui va el nombre de el server, pero Importante no se cambia y se queda como LOCALHOST
 $username = "nombre_del_admin_asignado"; //Importante colocar bien el nombre si no saldra un error de NO DATA BASE CONNECTED
-$password = "LC.d%E7KMjgV"; // Contraseña creada para el usuario
+$password = "contraseña_segura"; // Contraseña creada para el usuario
 $dbname = "nombre_de_la_base_de_datos"; // Si se coloca mal algun nombre no funciona la conexion
 
 // Crear una conexión con MySQL
